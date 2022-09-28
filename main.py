@@ -24,7 +24,7 @@ def install(package):
         system("bash ./install.sh")
         system("cd")
         # Add Dolphin as an alias to .bashrc
-        system("echo alias Dolphin=\"cd ~/Dolphin/Dolphin && python3 runthis.py\")
+        system("echo 'alias Dolphin=\"cd ~/Dolphin/Dolphin && python3 runthis.py\"'")
         print("Dolphin has been installed! run \"Dolphin\" to run it!")
     elif package == "Silver":
         print("Installing Silver")
