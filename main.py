@@ -39,7 +39,7 @@ def verify(command):
     else:
         return False
     try:
-        print(f"Error! invalid command {tokened[3]})
+        print(f"Error! invalid command {tokened[3]}")
         return False
     except:
         return True
