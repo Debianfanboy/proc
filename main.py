@@ -2,6 +2,7 @@
 List of packages able to install:
 Dolphin
 Silver
+bad-apple
 """
 ########
 # reqs #
@@ -32,6 +33,15 @@ def install(package):
         # TODO: Make a dir with all installed packages and put them in that folder
         system("wget https://raw.githubusercontent.com/Ubuntufanboy/Silver/main/silver.py")
         print("Silver has been installed")
+    elif package == "bad-apple":
+        system("cd")
+        system("git clone https://www.github.com/Ubuntufanboy/bad-apple.git")
+        system("cd bad-apple")
+        system("chmod +x install.sh")
+        system("bash ./install.sh")
+        system("cd")
+        system("echo 'alias bad-apple=\"cd bad-apple && python3 framer.py && python3 convert.py && python3 main.py\"' > .bashrc")
+        print("Installed bad-apple!")
 def verify(command):
     tokened = command.split()
     if tokened[0] == "proc" and tokened[1] == "install":
